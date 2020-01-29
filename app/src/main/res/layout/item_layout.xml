@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="mUser"
+            type="com.databindingtips.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageUser"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:imageUrl="@{mUser.image}"
+            />
+
+        <TextView
+
+            android:layout_toRightOf="@id/imageUser"
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mUser.name}"/>
+
+        <TextView
+            android:layout_toRightOf="@id/imageUser"
+            android:layout_below="@id/tvUserName"
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="@{mUser.email}"
+            />
+
+    </RelativeLayout>
+
+</layout>
